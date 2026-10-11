@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en" class="is-loading">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aditi Raj — Turning customer noise into product decisions</title>
+<meta name="description" content="Aditi Raj — CSE (Data Science) undergraduate and Product Management intern at Spyne. Turning customer noise into product decisions with data and workflow analysis.">
+<meta name="theme-color" content="#f4efe3">
+<link rel="canonical" href="https://aditiraj29.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Aditi Raj">
+<meta property="og:title" content="Aditi Raj — Turning customer noise into product decisions">
+<meta property="og:description" content="Product Management intern at Spyne. A portfolio printed in pixels: how I work, three interactive projects, and the skills behind them.">
+<meta property="og:url" content="https://aditiraj29.github.io/">
+<meta property="og:image" content="https://aditiraj29.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Aditi Raj — Turning customer noise into product decisions, beside a pixel-art portrait.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8' shape-rendering='crispEdges'%3E%3Crect width='8' height='8' fill='%2315130f'/%3E%3Cpath fill='%23f4efe3' d='M3 1h2v1h1v1h1v4h-1v-2h-4v2h-1v-4h1v-1h1zM3 3v1h2v-1z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=JetBrains+Mono:wght@400;500&family=Pixelify+Sans:wght@400..700&family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=7">
+<noscript><style>.loader{display:none!important}.is-loading main,.is-loading .nav,.is-loading .foot,.is-loading .track{visibility:visible!important}</style></noscript>
+</head>
+<body>
+
+<!-- ============ preloader: the noise spells the name, then the motto ============ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader__top mono"><span>Aditi Raj</span><span>Signal Edition · ’26</span></div>
+  <div class="loader__mid mono" id="loadHint">raw signal</div>
+  <p class="loader__quote" id="loadQuote"></p>
+  <div class="loader__foot">
+    <div class="loader__count"><span id="loadNum">0</span><i>%</i></div>
+    <div class="loader__side">
+      <div class="loader__bar" id="loadBar"></div>
+      <div class="loader__msg mono" id="loadMsg">Setting the type…</div>
+    </div>
+  </div>
+</div>
+
+<canvas id="field" aria-hidden="true"></canvas>
+<canvas id="wipe" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ running header ============ -->
+<header class="nav" id="nav">
+  <a href="#hero" class="nav__brand" aria-label="Aditi Raj — Turning customer noise into product decisions — top">
+    <b class="logo-dot"></b><span class="nav__name">Aditi Raj</span><span class="nav__motto">Turning customer noise into product decisions</span>
+  </a>
+  <nav class="nav__links" aria-label="Primary">
+    <a href="#about" data-sec="about">About</a>
+    <a href="#experience" data-sec="experience">Experience</a>
+    <a href="#projects" data-sec="projects">Projects</a>
+    <a href="#skills" data-sec="skills">Skills</a>
+    <a href="#contact" data-sec="contact">Contact</a>
+  </nav>
+  <a class="pill-btn" href="assets/Aditi_Raj_Resume.pdf" target="_blank" rel="noopener">Résumé <span aria-hidden="true">↓</span></a>
+</header>
+
+<!-- scroll track: a tiny pixel runner follows your scroll; flags jump between pages -->
+<div class="track" id="track" aria-label="Page navigation">
+  <div class="track__line"></div>
+  <div class="track__fill" id="trackFill"></div>
+  <canvas class="runner" id="runner" width="12" height="12" aria-hidden="true"></canvas>
+</div>
+
+<main>
+
+<!-- ============ FRONT PAGE ============ -->
+<section class="hero" id="hero" data-chapter="Front page">
+  <div class="sheet">
+    <div class="dateline mono">
+      <span>Vol. I · No. 1 · Signal Edition</span>
+      <span>Product Management Intern · Spyne · Gurugram</span>
+      <span>Product × Data × AI</span>
+    </div>
+
+    <h1 class="masthead" id="heroName" aria-label="Aditi Raj"><span class="line" aria-hidden="true">Aditi Raj</span></h1>
+
+    <div class="motto" id="motto">
+      <i aria-hidden="true">✦</i>
+      <p>Turning customer noise into <span class="mark">product decisions</span>.</p>
+      <i aria-hidden="true">✦</i>
+    </div>
+
+    <div class="ticker" aria-label="Headline figures, self-reported">
+      <div class="ticker__track" id="ticker">
+        <div class="ticker__set">
+          <span class="t-l">Contracting TAT*</span><b class="n dn">-52%</b>
+          <span class="t-l">Video campaigns shipped</span><b class="n up">12</b>
+          <span class="t-l">CGPA</span><b class="n up">8.2</b>
+          <span class="t-l">Projects built</span><b class="n">3</b>
+          <span class="t-l">Noise</span><b class="n dn">100% → signal</b>
+          <span class="t-l">Internships</span><b class="n">2</b>
+        </div>
+        <div class="ticker__set" aria-hidden="true">
+          <span class="t-l">Contracting TAT*</span><b class="n dn">-52%</b>
+          <span class="t-l">Video campaigns shipped</span><b class="n up">12</b>
+          <span class="t-l">CGPA</span><b class="n up">8.2</b>
+          <span class="t-l">Projects built</span><b class="n">3</b>
+          <span class="t-l">Noise</span><b class="n dn">100% → signal</b>
+          <span class="t-l">Internships</span><b class="n">2</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="front">
+      <article class="lead">
+        <span class="kicker mono">Shipped · Vini AI · Sales &amp; service campaigns</span>
+        <h2 class="lead__h"><em>Video Outreach</em> ships in Vini&nbsp;AI — twelve campaigns across sales and service</h2>
+        <p class="byline mono">By Aditi Raj · Product Management Intern</p>
+        <p class="standfirst">Campaigns can now send a short, personal video from a sales or service agent along with every text — personalized with the customer’s name and vehicle.</p>
+        <div class="lead__body">
+          <p>I recently launched this at Spyne: Video Outreach, a native step in Vini AI’s sales and service campaigns. Pick a use case, add it to a campaign, and every follow-up goes out with a short personal video from an agent.</p>
+          <p>It ships as twelve ready-to-use campaigns — nine for sales, three for service — each with its own video and script, in male and female versions.</p>
+        </div>
+        <p class="mono foot-note">Vini AI · Retail Suite by Spyne. * Self-reported Spyne internal process metric. <a class="more" href="#experience">Continued on page 3 →</a></p>
+      </article>
+
+      <aside class="front__side">
+        <figure class="figure figure--portrait" data-dim="0.5">
+          <div class="figure__win">
+            <canvas class="portrait" id="portrait" role="img" aria-label="Pixel-art portrait of Aditi Raj"></canvas>
+          </div>
+        </figure>
+        <nav class="inside" aria-label="Inside this edition">
+          <span class="inside__h mono">Inside this edition</span>
+          <a href="#about"><span>About</span><i></i><b>2</b></a>
+          <a href="#experience"><span>Experience</span><i></i><b>3</b></a>
+          <a href="#projects"><span>Projects</span><i></i><b>4</b></a>
+          <a href="#skills"><span>Skills &amp; honours</span><i></i><b>5</b></a>
+          <a href="#contact"><span>Contact</span><i></i><b>6</b></a>
+        </nav>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ about ============ -->
+<section class="about" id="about" data-chapter="About">
+  <div class="sheet">
+    <div class="sec-label"><span class="mono">Page 2</span><span class="mono">Profile</span></div>
+    <div class="about__grid">
+      <div class="about__main">
+        <div class="legend" id="legend" role="group" aria-label="Skill clusters">
+          <div class="chip" style="--c:var(--aqua)"><b>Analytics</b><span>SQL · Funnel analysis · Power BI</span></div>
+          <div class="chip" style="--c:var(--signal)"><b>Product</b><span>Requirements · CRM / DMS workflows</span></div>
+          <div class="chip" style="--c:var(--lime)"><b>AI</b><span>Agentic AI · Automation · Vini AI</span></div>
+        </div>
+      </div>
+
+      <figure class="figure" data-dim="1">
+        <div class="figure__win" aria-hidden="true"></div>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ experience ============ -->
+<section class="exp" id="experience" data-chapter="Experience">
+  <div class="exp__pin" id="expPin">
+    <div class="exp__stage">
+      <div class="sheet exp__sheet">
+        <div class="exp__left">
+          <div class="sec-label"><span class="mono">Page 3</span><span class="mono">Feature</span></div>
+
+          <div class="exp__role">
+            <span class="mono">Jun 2026 — Present · Gurugram</span>
+            <h2>Product Management Intern <em>@ Spyne</em></h2>
+          </div>
+
+          <div class="exp__steps" id="steps">
+            <article class="step">
+              <span class="step__n mono">01 / 05</span>
+              <h3>Discover</h3>
+              <p>Worked across CRM, Inventory Management and DMS platforms to understand real user workflows — and find the process gaps.</p>
+            </article>
+            <article class="step">
+              <span class="step__n mono">02 / 05</span>
+              <h3>Define</h3>
+              <p>Gathered requirements and turned dealership feedback and business needs into clear product improvements, alongside Customer Success and Product.</p>
+            </article>
+            <article class="step">
+              <span class="step__n mono">03 / 05</span>
+              <h3>Build</h3>
+              <p>Led Hot Lead Re-Engagement for Vini AI — from customer requirements all the way through production. Most recently, shipped Video Outreach in Vini AI — twelve campaigns across sales and service.</p>
+            </article>
+            <article class="step">
+              <span class="step__n mono">04 / 05</span>
+              <h3>Streamline</h3>
+              <p>Cut contracting TAT by 52%* through workflow analysis and cross-functional process improvements.</p>
+            </article>
+            <article class="step">
+              <span class="step__n mono">05 / 05</span>
+              <h3>Measure</h3>
+              <p>Raised adoption of internal product features through event-level and feature-usage analysis — and built a live dashboard tracking engagement, conversion and campaign metrics.</p>
+            </article>
+          </div>
+
+          <ol class="rail" id="rail" aria-hidden="true">
+            <li><i></i><span class="mono">Discover</span></li>
+            <li><i></i><span class="mono">Define</span></li>
+            <li><i></i><span class="mono">Build</span></li>
+            <li><i></i><span class="mono">Streamline</span></li>
+            <li><i></i><span class="mono">Measure</span></li>
+          </ol>
+        </div>
+
+        <div class="exp__right">
+          <figure class="figure figure--exp" data-dim="1">
+            <div class="figure__win" aria-hidden="true"></div>
+          </figure>
+
+          <div class="exp__panels" id="panels">
+            <div class="panel" data-p="0">
+              <div class="panel__head mono"><span>Platforms in scope</span><span>Discover</span></div>
+              <div class="chips"><span class="pchip">CRM</span><span class="pchip">Inventory Management</span><span class="pchip">DMS</span></div>
+              <p class="panel__note">Mapped how people actually work across all three, then logged where the process broke.</p>
+            </div>
+
+            <div class="panel" data-p="1">
+              <div class="panel__head mono"><span>Requirements loop</span><span>Define</span></div>
+              <div class="flow"><span class="pchip">Dealership feedback</span><i>▸</i><span class="pchip">Customer Success + Product</span><i>▸</i><span class="pchip pchip--on">Requirements</span></div>
+              <p class="panel__note">Feedback in, a clear product improvement out.</p>
+            </div>
+
+            <div class="panel" data-p="2">
+              <div class="panel__head mono"><span>Hot Lead Re-Engagement · Vini AI</span><span>Build</span></div>
+              <div class="flow"><span class="pchip">Customer requirements</span><i>▸</i><span class="pchip">AI solution</span><i>▸</i><span class="pchip pchip--on">Production ✓</span></div>
+              <p class="panel__note">Led from the first requirement through production.</p>
+            </div>
+
+            <div class="panel" data-p="3">
+              <div class="panel__head mono"><span>Process improvement</span><span>Streamline</span></div>
+              <div class="flow"><span class="pchip">Workflow analysis</span><i>▸</i><span class="pchip">Cross-functional fixes</span><i>▸</i><span class="pchip pchip--on">Contracting TAT −52%*</span></div>
+              <p class="panel__foot mono">* Self-reported Spyne internal ops metric.</p>
+            </div>
+
+            <div class="dash panel" id="dash" data-p="4" aria-label="Illustration of a campaign dashboard">
+              <div class="panel__head mono"><span>Campaign dashboard</span><span class="live"><b class="pulse"></b>live</span></div>
+              <div class="dash__grid">
+                <div class="tile"><span class="mono">Engagement</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path pathLength="1" d="M0 32 L14 30 L18 18 L30 20 L40 28 L52 30 L64 16 L78 12 L90 8 L120 6"/></svg></div>
+                <div class="tile"><span class="mono">Conversion</span><svg viewBox="0 0 120 40" preserveAspectRatio="none"><path pathLength="1" d="M0 34 L20 34 L26 28 L40 26 L54 24 L66 20 L80 14 L92 12 L104 10 L120 4"/></svg></div>
+                <div class="tile tile--wide"><span class="mono">Campaigns</span><svg viewBox="0 0 240 40" preserveAspectRatio="none"><path pathLength="1" d="M0 24 L30 10 L44 34 L80 22 L110 14 L130 6 L160 20 L190 30 L210 34 L240 12"/></svg></div>
+              </div>
+              <div class="dash__foot mono">Illustrative shapes — no real data shown</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <div class="prev">
+      <div class="prev__meta">
+        <span class="mono">May 2025 — Jun 2025 · New Delhi</span>
+        <h3 data-reveal>Data Analytics Intern <em>@ MDTRESY Medical Travel</em></h3>
+      </div>
+      <ul class="prev__list" data-fade>
+        <li>Analyzed and transformed structured datasets using Python, Pandas and NumPy to identify patterns and generate actionable insights.</li>
+        <li>Built interactive Power BI dashboards to communicate findings to stakeholders.</li>
+      </ul>
+      <div class="bars" id="bars" aria-hidden="true">
+        <i style="--h:38%"></i><i style="--h:62%"></i><i style="--h:48%"></i><i style="--h:80%"></i><i style="--h:56%"></i><i style="--h:92%"></i><i style="--h:70%"></i><i style="--h:100%"></i>
+        <span class="mono">Illustrative</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ projects ============ -->
+<section class="proj" id="projects" data-chapter="Projects">
+  <div class="sheet">
+    <div class="sec-label"><span class="mono">Page 4</span><span class="mono">Features</span></div>
+    <h2 class="big" data-reveal>Three builds. <em>Each one playable.</em></h2>
+    <figure class="figure figure--band" data-dim="1">
+      <div class="figure__win" aria-hidden="true"></div>
+    </figure>
+
+    <div class="stack" id="stack">
+
+      <!-- 01 Nexpilot -->
+      <article class="card" style="--i:0">
+        <div class="card__info">
+          <div class="card__top mono"><span>01</span><span>June 2026</span></div>
+          <h3>Nexpilot AI</h3>
+          <p class="card__sub">AI Autonomous Workspace</p>
+          <p>Full-stack AI workspace with scalable REST APIs and AI workflow automation, supporting agentic and multi-agent workflows.</p>
+          <ul class="tags"><li>Next.js</li><li>React.js</li><li>FastAPI</li><li>Python</li><li>TypeScript</li><li>SQLite</li></ul>
+        </div>
+        <div class="card__demo">
+          <div class="win" id="demoNexpilot">
+            <div class="win__bar"><i></i><i></i><i></i><span class="mono">multi-agent run · simulated</span></div>
+            <form class="np__goal" id="npForm" autocomplete="off">
+              <label class="mono" for="npGoal">Goal</label>
+              <input id="npGoal" type="text" value="Prepare a competitor brief" maxlength="48">
+              <button type="submit" class="run" id="npRun">Run ▸</button>
+            </form>
+            <svg class="np__graph" id="npGraph" viewBox="0 0 540 230" role="img" aria-label="Agent graph: goal, planner, three worker agents, reviewer, output"></svg>
+            <pre class="np__log" id="npLog" aria-live="polite"></pre>
+            <div class="win__note mono">Simplified sketch of an agentic pattern — not the production graph.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 02 Object detection -->
+      <article class="card" style="--i:1">
+        <div class="card__info">
+          <div class="card__top mono"><span>02</span><span>March 2026</span></div>
+          <h3>Object Detection &amp; Safety System</h3>
+          <p class="card__sub">Real-Time Object Detection</p>
+          <p>Real-time object detection for live video analysis using YOLOv8 and OpenCV, evaluated on precision and recall.</p>
+          <ul class="tags"><li>Python</li><li>OpenCV</li><li>YOLOv8</li><li>NumPy</li></ul>
+        </div>
+        <div class="card__demo">
+          <div class="win" id="demoOD">
+            <div class="win__bar"><i></i><i></i><i></i><span class="mono">live feed · interactive sketch</span></div>
+            <div class="od">
+              <canvas id="odCanvas" aria-label="Interactive detection sketch. Drag objects around or click to add one."></canvas>
+              <div class="od__hud">
+                <label class="toggle mono"><input type="checkbox" id="odBoxes" checked><span>detections</span></label>
+                <span class="mono" id="odCount">objects 0</span>
+                <span class="mono od__alert" id="odAlert"></span>
+              </div>
+            </div>
+            <div class="win__note mono">Drag a person into the zone · click empty space to add an object. Illustrative, not model output.</div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 Evidentia -->
+      <article class="card" style="--i:2">
+        <div class="card__info">
+          <div class="card__top mono"><span>03</span><span>November 2025</span></div>
+          <h3>Evidentia</h3>
+          <p class="card__sub">Evidence Tampering Detection System</p>
+          <p>A hashing-based system to verify file integrity and detect tampering. The panel on the right is the idea, running for real — it computes genuine SHA-256 digests.</p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Cryptography</li></ul>
+        </div>
+        <div class="card__demo">
+          <div class="win" id="demoEvidentia">
+            <div class="win__bar"><i></i><i></i><i></i><span class="mono">integrity check · live SHA-256</span></div>
+            <div class="ev">
+              <label class="mono" for="evText">Evidence — edit it, or drop any file</label>
+              <textarea id="evText" rows="3" spellcheck="false">Exhibit A — access log 14:02:11. Chain of custody intact.</textarea>
+              <div class="ev__row">
+                <button type="button" class="run" id="evSeal">Seal evidence</button>
+                <button type="button" class="ghost" id="evTamper">Tamper 1 character</button>
+                <label class="drop" id="evDrop"><input type="file" id="evFile" hidden>or drop a file</label>
+              </div>
+              <div class="ev__chip mono" id="evChip" hidden></div>
+              <div class="ev__hash"><span class="mono">Sealed</span><code id="evSealed" aria-label="Sealed SHA-256 digest"></code></div>
+              <div class="ev__hash"><span class="mono">Current</span><code id="evNow" aria-label="Current SHA-256 digest"></code></div>
+              <div class="ev__status" id="evStatus" role="status"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ skills: classifieds, with receipts ============ -->
+<section class="skills" id="skills" data-chapter="Skills">
+  <div class="sheet">
+    <div class="sec-label"><span class="mono">Page 5</span><span class="mono">Classifieds</span></div>
+    <div class="skills__head">
+      <div>
+        <h2 class="big" data-reveal>Skills, <em>with receipts.</em></h2>
+        <p class="mono hint">Tap a skill to light up the roles and projects it came from. Tap a role or project to light up its skills.</p>
+      </div>
+      <figure class="figure figure--sq" data-dim="1">
+        <div class="figure__win" aria-hidden="true"></div>
+      </figure>
+    </div>
+
+    <div class="quests" id="quests" role="group" aria-label="Roles and projects"></div>
+    <div class="inv" id="inv"></div>
+
+    <div class="ach">
+      <div class="sec-label"><span class="mono">★</span><span class="mono">Honours</span></div>
+      <div class="ach__grid">
+        <article class="ach__card" data-ach>
+          <canvas class="sprite" data-sprite="trophy" width="12" height="12" aria-hidden="true"></canvas>
+          <div>
+            <span class="mono ach__tag">Achievement unlocked</span>
+            <h3>Student Excellence Award</h3>
+            <p>Selected for presenting the paper “An AI-Driven Framework for Geopolitical Risk Prediction and Analysis.”</p>
+          </div>
+        </article>
+        <article class="ach__card" data-ach>
+          <canvas class="sprite" data-sprite="star" width="12" height="12" aria-hidden="true"></canvas>
+          <div>
+            <span class="mono ach__tag">Achievement unlocked</span>
+            <h3>TechIdeate’26 — Head of Outreach</h3>
+            <p>Served as Head of the Executive Committee for Outreach, leading hospitality and operations for Manipal University Jaipur’s flagship technology fest.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="edu">
+      <article class="edu__card" data-fade>
+        <span class="mono">Education</span>
+        <h3>Manipal University Jaipur</h3>
+        <p>B.Tech in Computer Science &amp; Engineering — Specialization in Data Science · CGPA 8.2</p>
+        <div class="timeline">
+          <div class="timeline__bar" id="eduCells" aria-hidden="true"></div>
+          <div class="timeline__row mono"><span>Aug 2023</span><span id="eduPct">—</span><span>Jul 2027</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ contact: letters to the editor ============ -->
+<section class="contact" id="contact" data-chapter="Contact">
+  <div class="sheet">
+    <div class="sec-label"><span class="mono">Page 6</span><span class="mono">Letters to the editor</span></div>
+    <div class="contact__grid">
+      <div>
+        <h2 class="mega" data-reveal>Got a messy problem? <em>Let’s make it a product.</em></h2>
+        <p class="contact__sub" data-fade>Open to conversations on product, partnerships and AI-driven initiatives.</p>
+
+        <button class="mail" id="mail" data-email="aditiraj2903@gmail.com" aria-label="Copy email address">
+          <span class="mail__label">aditiraj2903@gmail.com</span>
+          <span class="mail__hint mono" id="mailHint">Click to copy</span>
+        </button>
+
+        <div class="links" data-fade>
+          <a href="https://www.linkedin.com/in/aditi-raj-2903ar" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
+          <a href="https://github.com/aditiraj29" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+          <a href="assets/Aditi_Raj_Resume.pdf" target="_blank" rel="noopener">Résumé <span>↓</span></a>
+        </div>
+      </div>
+      <figure class="figure figure--sq" data-dim="1">
+        <div class="figure__win" aria-hidden="true"></div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="sheet">
+    <div class="foot__brand">
+      <span class="foot__name">Aditi Raj</span>
+      <span class="foot__motto">Turning customer noise into product decisions.</span>
+    </div>
+    <div class="foot__in">
+      <span class="mono">© 2026 · Open to opportunities — product, partnerships &amp; AI-driven initiatives</span>
+      <span class="mono" id="clock">Gurugram · —</span>
+      <a class="mono" href="#hero" id="toTop">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<div class="toast mono" id="toast" role="status"></div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/pixel.js?v=7"></script>
+<script src="js/portrait-data.js?v=7"></script>
+<script src="js/portrait.js?v=7"></script>
+<script src="js/field.js?v=7"></script>
+<script src="js/demos.js?v=7"></script>
+<script src="js/loadout.js?v=7"></script>
+<script src="js/main.js?v=7"></script>
+</body>
+</html>
