@@ -483,6 +483,19 @@ main, .foot { position: relative; z-index: 2; }
   .figure--band .figure__win { height: 90px; }
   .figure--sq .figure__win { height: 220px; }
   .motto i { display: none; }
+
+  /* front page on a phone: the portrait sits BESIDE the headline (a newspaper byline photo), on the very first screen,
+     instead of coming after the whole story. .lead / .front__side dissolve into the grid so their children can be placed. */
+  .front { grid-template-columns: minmax(0, 1fr) 152px; column-gap: 14px; }
+  .lead, .front__side { display: contents; }
+  .kicker { grid-column: 1 / -1; grid-row: 1; }
+  .lead__h { grid-column: 1; grid-row: 2; font-size: clamp(1.2rem, 5.7vw, 1.6rem); margin: 8px 0; max-width: none; }
+  .byline { grid-column: 1; grid-row: 3; align-self: start; margin-bottom: 0; }
+  .figure--portrait { grid-column: 2; grid-row: 2 / span 2; align-self: start; margin-top: 8px; }
+  .standfirst { grid-column: 1 / -1; grid-row: 4; margin-top: 14px; }
+  .lead__body { grid-column: 1 / -1; grid-row: 5; }
+  .lead .foot-note { grid-column: 1 / -1; grid-row: 6; padding-bottom: 26px; border-bottom: 1px solid var(--ink); }
+  .inside { grid-column: 1 / -1; grid-row: 7; margin-top: 24px; }
 }
 @media (max-width: 560px) {
   .np__graph .node text { font-size: 13px; }
